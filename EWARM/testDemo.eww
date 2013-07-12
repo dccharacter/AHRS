@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\Demo.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\!Docs\STM32F3-Discovery_FW_V1.1.0\Project\Peripheral_Examples\USB_Example\EWARM\USB_Example.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+
