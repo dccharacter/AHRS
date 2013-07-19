@@ -13,8 +13,8 @@ I found them here: http://www.x-io.co.uk/open-source-imu-and-ahrs-algorithms/
 Please let me know if I give a wrong reference or fail to properly identify authors
 
 You can switch between algorythms by commenting/uncommenting appropreate lines in file sensors.c:
-#define USE_MADGWICK_AHRS
-//#define USE_MAHONY_AHRS
+  #define USE_MADGWICK_AHRS
+  //#define USE_MAHONY_AHRS
 
 OUTPUT
 ======
