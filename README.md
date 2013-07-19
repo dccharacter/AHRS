@@ -4,7 +4,7 @@ AHRS
 This is a test project for STM32F3-Discovery. It works as the discovery board spatial positioning visualization system. It uses all the three sensors that are on board of STMF3-Discovery.
 
 FUSION
-------
+======
 Fusion code: either of
  -Madgwick algorythm
  -Mahony algorythm
@@ -17,13 +17,13 @@ You can switch between algorythms by commenting/uncommenting appropreate lines i
 //#define USE_MAHONY_AHRS
 
 OUTPUT
-------
+======
 The firmware can use USART (Quaternion) or USB-HID(Euler angles) for data output
 Either USART_USE_USB or USART_USE_USART must be defined for this
 I do this in project settings (external pre-defined macro)
 
 VISUALIZATION
--------------
+=============
 There's a Python visualization script myVisualisation.py
 To use this one, you need:
  -Python 2.7
