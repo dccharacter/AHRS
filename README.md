@@ -19,7 +19,9 @@ You can switch between algorythms by commenting/uncommenting appropreate lines i
 OUTPUT
 ======
 The firmware can use USART (Quaternion) or USB-HID(Euler angles) for data output
+
 Either USART_USE_USB or USART_USE_USART must be defined for this
+
 I do this in project settings (external pre-defined macro)
 
 VISUALIZATION
