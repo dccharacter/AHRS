@@ -1,3 +1,4 @@
+<pre>
 AHRS
 ====
 
@@ -37,3 +38,4 @@ To switch between USART and USB, you have to change the following line in main()
 comm = CommunicationDevice('joystick')
 change to 
 comm = CommunicationDevice('serial')
+</pre>
