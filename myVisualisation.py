@@ -42,12 +42,13 @@ class Quaternion(object):
     def asMatrix(self):
         return mat(self.q)
 
-    def asEuler(self):
-        q1, q2, q3, q4 = self.q
-        yaw = atan2(2*q2*q3-2*q1*q4, 2*q1*q1+2*q2*q2-1) ##Yaw, psi, Euler[0]     
-        pitch = -arcsin(2*q2*q4+2*q1*q3)  ##Pitch, theta        
-        roll = atan2(2*q3*q4-2*q1*q2, 2*q1*q1+2*q4*q4-1) ##Roll, phi
-        return (roll, pitch, yaw)
+    ## like this http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/
+    def asEuler(self): 
+            qw, qx, qy, qz = self.q
+            head = atan2(2*qy*qw-2*qx*qz, 1-2*qy*qy-2*qz*qz)  
+            att = arcsin(2*qx*qy+2*qz*qw)
+            bank = atan(2*qx*qw-2*qy*qz, 1-2*qx*qx-2*qz*qz)
+            return (head, att, bank)
 
     def fromEulerTuple(self, euler):
         hea, att, ban = euler
@@ -229,6 +230,7 @@ def main():
     quatern = Quaternion()
     
     while True:
+        sleep(0.01)  # python window freezes whithout short sleep in my PC
         comm.updateQuaternion(quatern)
         result = vis.rotate3DQuaternion(quatern)
         if result == 'exit':
